@@ -1,5 +1,7 @@
 # solar-web
 
+Solar power monitoring web page with Vue.js, Vuetify, TypeScript.
+
 ## Project setup
 ```
 yarn install
