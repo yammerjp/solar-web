@@ -4,7 +4,20 @@
       app
       color="primary"
       dark
+      class="app-bar"
     >
+    <v-tool-bar-title>
+      太陽光 発電量
+    </v-tool-bar-title>
+    <template v-slot:extension>
+      <v-tabs
+        v-model="tab"
+        centered
+      >
+        <v-tab :href="tab-graph">グラフ</v-tab>
+        <v-tab :href="tab-table">表</v-tab>
+      </v-tabs>
+    </template>
     </v-app-bar>
 
     <v-content>
@@ -12,6 +25,12 @@
     </v-content>
   </v-app>
 </template>
+
+<style>
+.app-bar {
+  text-align: center;
+}
+</style>
 
 
 <script lang="ts">
@@ -40,6 +59,8 @@ const csv2object = (csvText: string): Log[] => {
 })
 export default class App extends Vue {
   logs: Log[] = [];
+
+  tab = 'tab-table';
 
   mounted() {
     this.axios.get(csvServerUri)
