@@ -24,3 +24,10 @@ yarn lint
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
+
+## ToDo
+
+- dwonload csv
+- add graph
+- devide pages with 1day, 1week, 1month
+
