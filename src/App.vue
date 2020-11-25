@@ -37,7 +37,7 @@
 import { Vue, Component } from 'vue-property-decorator';
 import LogTable from './components/LogTable.vue';
 
-const csvServerUri = 'http://localhost:3000';
+const csvServerUri = 'http://192.168.0.2:3000';
 
 const csv2object = (csvText: string): Log[] => {
   const rowStrings = csvText.split('\n');
